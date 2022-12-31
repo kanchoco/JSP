@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="User">
+	<select id="checkId" parameterType="string" resultType="_int">
+		select count(userId) from tbl_user where userId = #{userId}
+	</select>
+	
+	<insert id="insert" parameterType="vo.UserVO">
+		insert into tbl_user(userId, userPassword, userName, userAge, userPhoneNumber, userBirth) values(#{userId}, #{userPassword}, #{userName}, #{userAge}, #{userPhonenumber}, #{userBirth})
+	</insert>
+	
+	<select id="findId" parameterType="string" resultType="string">
+		select userId from tbl_user where userPhoneNumber = #{userPhonenumber}
+	</select>
+	
+	<select id="login" parameterType = "vo.UserVO" resultType="vo.UserVO">
+		select userNumber, userId, userPassword, userName, userAge, userPhoneNumber, userBirth from tbl_user where userId = #{userId} and userPassword =#{userPassword}
+	</select>
+	
+</mapper>
