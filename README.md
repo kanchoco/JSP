@@ -94,7 +94,7 @@ web.xml - 요청 시, 무조건 거침
 - 백그라운드 영역에서 서버와 통신하여, 그 결과를 웹 페이지 일부분에만 표시할 수 있다.
 
 ### Ajax의 원리
-![ajax](https://user-images.githubusercontent.com/109493547/210162782-67637392-771f-47a6-b7e5-de9c10dd719f.png)
+![ajax원리](https://user-images.githubusercontent.com/109493547/210162972-364caa0d-d30d-4f11-b9e8-244e86ac757d.png)
 
 
 ### Ajax의 장점
